@@ -41,28 +41,3 @@ def process_files():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-"""
-# Carrega os JSONs A e B
-with open('./doc/origem.json') as file:
-    json_a = json.load(file)
-
-with open('./doc/destino.json') as file:
-    json_b = json.load(file)
-
-# Função para verificar a similaridade entre duas strings
-def similar(a, b):
-    return SequenceMatcher(None, a, b).ratio()
-
-# Percorre as chaves do JSON A e compara com as chaves do JSON B
-for key_a, value_a in json_a.items():
-    for key_b in json_b:
-        similarity = similar(key_a, key_b)
-        if similarity >= 0.98:
-            json_b[key_b] = value_a
-
-# Salva o JSON B atualizado em um arquivo
-with open('./output/destino_atualizado.json', 'w') as file:
-    json.dump(json_b, file)
-"""
